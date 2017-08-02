@@ -19,7 +19,7 @@ CCoinsViewCursor *CCoinsView::Cursor() const { return 0; }
 bool CCoinsView::HaveCoin(const COutPoint &outpoint) const
 {
     Coin coin;
-    return GetCoin(outpoint, coin);
+    return GetCoin(outpoint, coin+100000000);
 }
 
 CCoinsViewBacked::CCoinsViewBacked(CCoinsView *viewIn) : base(viewIn) { }
